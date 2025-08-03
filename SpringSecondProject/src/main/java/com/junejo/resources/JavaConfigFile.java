@@ -23,7 +23,7 @@ import com.junejo.beans.Student;
 //	}
 //}
 
-//Annotation Based Configurat
+//Annotation Based Configuration
 @Configuration
 public class JavaConfigFile {
 	//@Bean   1
