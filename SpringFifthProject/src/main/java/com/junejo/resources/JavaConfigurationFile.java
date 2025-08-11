@@ -12,7 +12,7 @@ public class JavaConfigurationFile {
 	@Bean
 	public Address createAddrObject() {
 		
-		Address addr = new Address();
+		Address addr = new Address(101,"Karachi",54321);
 		
 		
 		
@@ -22,7 +22,7 @@ public class JavaConfigurationFile {
 	@Bean
 	public Student stdObject() {
 		
-		Student std=new Student();
+		Student std=new Student("Abu",05,createAddrObject());
 		
 		
 		return std;
