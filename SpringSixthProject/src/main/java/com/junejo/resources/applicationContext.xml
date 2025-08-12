@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<!-- by using setter method -->
+	<!-- <bean class="com.junejo.beans.Address" id="addr"> <property name="houseno" 
+		value="78" /> <property name="city" value="Tando Bago" /> <property name="pincode" 
+		value="8732" /> </bean> -->
+
+
+	<!-- by using byName mode -->
+	<!-- <bean class="com.junejo.beans.Student" id="stdId" autowire="byName"> 
+		<property name="name" value="Abu Hurera" /> <property name="rollno" value="897" 
+		/> </bean> -->
+
+	<!-- by using byType mode: check the type -->
+	<!-- <bean class="com.junejo.beans.Student" id="stdId" autowire="byType"> 
+		<property name="name" value="Abu Hurera" /> <property name="rollno" value="897" 
+		/> </bean> -->
+
+
+	<bean class="com.junejo.beans.Address" id="addr1" >
+		<property name="houseno" value="78" />
+		<property name="city" value="Tando Bago" />
+		<property name="pincode" value="8732" />
+	</bean>
+	
+	<bean class="com.junejo.beans.Address" id="addr2" autowire-candidate="false">
+		<property name="houseno" value="79" />
+		<property name="city" value="Badin" />
+		<property name="pincode" value="8731" />
+	</bean>
+	
+	<bean class="com.junejo.beans.Student" id="stdId"
+		autowire="byType">
+		<property name="name" value="Abu Hurera" />
+		<property name="rollno" value="897" />
+	</bean>
+
+</beans>
