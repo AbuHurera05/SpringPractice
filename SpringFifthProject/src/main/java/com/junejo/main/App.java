@@ -7,10 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.junejo.beans.Student;
 import com.junejo.resources.JavaConfigurationFile;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
